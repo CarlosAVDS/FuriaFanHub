@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FURIA Esports - Fã Hub</title>
+    <link rel="icon" type="image/x-icon" href="assets/furia-logo.png">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="text/javascript" src="scripts/main.js">
+</head>
+
+<body>
+    <header>
+        <div class="main-header">
+            <img src="assets/furia-logo.png" alt="furia-logo">
+            <h1>FURIA Esports</h1>
+        </div>
+        <div class="topnav">
+            <a class="active" href="index.html">Inicio</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Noticias</button>
+                <div class="dropdown-content">
+                    <a href="https://www.dust2.com.br/">Dust2</a>
+                    <a href="https://www.hltv.org/team/8297/furiaa">HLTV</a>
+                    <a href="https://liquipedia.net/counterstrike/FURIA">Liquipedia</a>
+                </div>
+            </div>
+            <a href="https://www.furia.gg/" target="_blank">Loja</a>
+            <a href="ranking.html">Ranking</a>
+
+            <div class="user-actions">
+                <a href="login.html" id="loginLink" class="split"><i class="fas fa-user"></i> Login</a>
+                <a href="#" onclick="logout()" id="logoutLink" class="split" style="display:none">Sair</a>
+            </div>
+
+        </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="noticias">
+            <h2>Últimas Notícias</h2>
+            <div class="news-list">
+                <article class="news-card">
+                    <a href="https://www.dust2.com.br/noticias/60129/furia-anuncia-awper-do-cazaquistao"
+                        target="_blank"><img src="assets/molodoy.jpg" alt="noticia1">
+                    </a>
+                    <h2>FURIA anuncia awper estrangeiro</h2>
+                    <p>Pouco depois de colocar Marcelo "chelo" Cespedes no banco de reservar, a FURIA já tem um novo
+                        jogador. Pantera anunciou nesta sexta-feira o awper Danil "molodoy" Golubenko, que estava na
+                        AMKAL é o novo reforço do time brasileiro.</p>
+                    <small>[DUST2] 11 de abril de 2025 às 16:03 Escrito por vitoriavonb</small>
+                </article>
+                <article class="news-card">
+                    <a href="https://www.dust2.com.br/noticias/60577/furia-anuncia-novo-reforco" target="_blank"><img
+                            src="assets/yekindar.jpg" alt="noticia2"></a>
+                    <h3>FURIA anuncia novo reforço</h3>
+                    <p>A FURA tem um novo reforço internacional. A organização anunciou nesta terça-feira que Mares
+                        "YEKINDAR" Gaļinskis chega à organização, inicialmente como stand-in, e vai disputar pelo menos
+                        três campeonatos com o time brasileiro.</p>
+                    <small>[DUST2] 22 de abril de 2025 às 14:04 Escrito por vhporto</small>
+                </article>
+                <article class="news-card">
+                    <a href="https://www.dust2.com.br/noticias/59546/furia-lanca-uniforme-com-a-adidas"
+                        target="_blank"><img src="assets/uniforme.jpg" alt="noticia3"></a>
+                    <h3>FURIA lança uniforme com a Adidas</h3>
+                    <p>A FURIA lançou nesta sexta-feira um novo uniforme. Desta vez, a camiseta foi feita em
+                        colaboração
+                        com a Adidas e tem detalhes no ombro, com as três listras brancas - tradicionais da marca -,
+                        e
+                        também uma pantera.</p>
+                    <small>[DUST2] 28 de março de 2025 às 10:46 Escrito por vhporto</small>
+                </article>
+                <article class="news-card">
+                    <img src="assets/furia-logo.png" alt="noticia3">
+                    </a>
+                    <h3>Conheça o projeto Know Your Fan</h3>
+                    <p>Um programa que personaliza experiências com base no seu perfil como torcedor.</p>
+                </article>
+            </div>
+    </main>
+
+    <button class="open-btn" onclick="openChatWindow()">Chat <i class="fa-solid fa-arrow-up"></i></button>
+    <div class="chatbot" id="chat-form-container">
+        <form action="#" class="form-container">
+            <div class="chatbot-header">
+                <img src="assets/furia-logo.png" alt="FURIA Bot" class="bot-avatar">
+                <h4> Quick FURIA </h4>
+                <span class="close-btn" onclick="closeChatWindow()"><i class="fa-solid fa-arrow-down"></i></span>
+            </div>
+
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="bot-bubble">Olá, FURIOSO! Como posso te ajudar hoje?</div>
+            </div>
+            <div class="chatbot-quick">
+                <button onclick="quickMessage('Próximo')">📅 Próximo jogo</button>
+                <button onclick="quickMessage('Lineup')">👥 Lineup</button>
+                <button onclick="quickMessage('Loja')">🛒 Loja</button>
+                <button onclick="clearChat()">🧹 Limpar Chat</button>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatInput" placeholder="Digite sua mensagem...">
+                <button onclick="sendMessage()" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer class="footer">
+        <h3>Projeto direcionado ao processo seletivo Furia</h3>
+        <br>
+        <p class="p-rodape"><b>Contatos:</b></p>
+        <p class="p-rodape">Email: carlosalbertovds04@gmail.com</p>
+        <a href="https://www.linkedin.com/in/carlosavds/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <br>
+        <p class="p-rodape"><b>Desenvolvido por Carlos</b></p>
+        <small class="p-rodape"><b>© 2025 FURIA Esports Fan Community</b></small>
+    </footer>
+
+    <script type="text/javascript" src="scripts/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking Fã Hub</title>
+    <link rel="icon" type="image/x-icon" href="assets/furia-logo.png">
+    <link rel="stylesheet" href="styles/ranking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="text/javascript" src="scripts/main.js">
+</head>
+
+<body>
+    <header>
+        <div class="main-header">
+            <img src="assets/furia-logo.png" alt="furia-logo">
+            <h1>FURIA Esports</h1>
+        </div>
+        <div class="topnav">
+            <a class="active" href="index.html">Inicio</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Noticias</button>
+                <div class="dropdown-content">
+                    <a href="https://www.dust2.com.br/">Dust2</a>
+                    <a href="https://www.hltv.org/team/8297/furiaa">HLTV</a>
+                    <a href="https://liquipedia.net/counterstrike/FURIA">Liquipedia</a>
+                </div>
+            </div>
+            <a href="https://www.furia.gg/" target="_blank">Loja</a>
+            <a href="ranking.html">Ranking</a>
+
+            <div class="user-actions">
+                <a href="login.html" id="loginLink" class="split"><i class="fas fa-user"></i> Login</a>
+                <a href="#" onclick="logout()" id="logoutLink" class="split" style="display:none">Sair</a>
+            </div>
+
+        </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Ranking de Fãs</h2>
+        <ul class="ranking-list">
+            <li class="ranking-item">
+                <span class="username">Fã #1</span>
+                <span class="score">1200 pts</span>
+            </li>
+            <li class="ranking-item">
+                <span class="username">Fã #2</span>
+                <span class="score">1100 pts</span>
+            </li>
+        </ul>
+    </main>
+
+
+    <script>
+        function carregarRanking() {
+            const rankingList = document.getElementById("rankingList");
+            const dados = [];
+
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key.startsWith("score_")) {
+                    const email = key.replace("score_", "");
+                    const score = parseInt(localStorage.getItem(key), 10);
+                    dados.push({
+                        usuario,
+                        score
+                    });
+                }
+            }
+
+            dados.sort((a, b) => b.score - a.score);
+
+            rankingList.innerHTML = dados.map((user, index) => `
+                <li>
+                    <span>#${index + 1} - ${user.email}</span>
+                    <span>${user.score} pts</span>
+                </li>
+            `).join("");
+        }
+
+        window.onload = carregarRanking;
+    </script>
+</body>
+
+</html>
