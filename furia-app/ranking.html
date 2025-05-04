@@ -55,35 +55,7 @@
     </main>
 
 
-    <script>
-        function carregarRanking() {
-            const rankingList = document.getElementById("rankingList");
-            const dados = [];
-
-            for (let i = 0; i < localStorage.length; i++) {
-                const key = localStorage.key(i);
-                if (key.startsWith("score_")) {
-                    const email = key.replace("score_", "");
-                    const score = parseInt(localStorage.getItem(key), 10);
-                    dados.push({
-                        usuario,
-                        score
-                    });
-                }
-            }
-
-            dados.sort((a, b) => b.score - a.score);
-
-            rankingList.innerHTML = dados.map((user, index) => `
-                <li>
-                    <span>#${index + 1} - ${user.email}</span>
-                    <span>${user.score} pts</span>
-                </li>
-            `).join("");
-        }
-
-        window.onload = carregarRanking;
-    </script>
+    <script type="text/javascript" src="scripts/main.js"></script>
 </body>
 
 </html>
