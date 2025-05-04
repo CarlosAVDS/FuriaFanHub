@@ -31,20 +31,35 @@ Esta é a landing page oficial de fãs da FURIA Esports, desenvolvida como um pr
 
 furia-fan-hub/
 ├── index.html
+
 ├── login.html
+
 ├── ranking.html
+
 ├── styles/
+
 │   └── index.css
+
 │   └── login.css
+
 │   └── ranking.css
+
 ├── scripts/
+
 │   └── main.js
+
 ├── assets/
-│   ├── furia-logo.png
-|   ├── materias/
-|   │   ├── molodoy.jpg
-|   │   ├── uniforme.jpg
-|   │   ├── yekindar.jpg
+
+│   └── furia-logo.png
+
+|   └── materias/
+
+|      └── molodoy.jpg
+
+|      └── uniforme.jpg
+
+|      └── yekindar.jpg
+
 ├── README.md
 
 ## 🛠️ Tecnologias Utilizadas
