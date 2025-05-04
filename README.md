@@ -78,6 +78,9 @@ git clone https://github.com/seunome/furia-fan-hub.git
 
 2. Abra o arquivo `index.html` no navegador de sua preferência.
 
+Links
+🔗 Site URL: (https://carlosavds.github.io/FuriaFanHub/)
+
 ## ✨ Contribuição
 
 Sinta-se à vontade para enviar sugestões, melhorias e novas funcionalidades via Pull Requests!
