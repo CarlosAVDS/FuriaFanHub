@@ -1,7 +1,7 @@
 
 # FURIA Esports - Fan Hub Landing Page 🎮🔥
 
-Esta é a landing page oficial de fãs da FURIA Esports, desenvolvida como um projeto interativo que une design moderno, funcionalidades de chatbot, status de jogos em tempo real e gamificação para engajamento da torcida.
+Esta é a landing page oficial de fãs da FURIA Esports, desenvolvida como um projeto interativo que une design moderno, funcionalidades de chatbot, status de jogos e gamificação para engajamento da torcida.
 
 ## 🔥 Funcionalidades
 
